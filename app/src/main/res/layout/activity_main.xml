@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Top Header Text -->
+        <TextView
+            android:id="@+id/headerTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="UTS - Train Booking App"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="#FF5722"
+            android:padding="12dp" />
+
+        <!-- Button Row -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:rowCount="2"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false">
+
+            <Button
+                android:id="@+id/btnCancelTicket"
+                android:text="CANCEL TICKET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="#FF5722"/>
+
+            <Button
+                android:id="@+id/btnBookingHistory"
+                android:text="BOOKING HISTORY"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="#FF5722"/>
+
+            <Button
+                android:id="@+id/btnShowTicket"
+                android:text="SHOW TICKET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="#FF5722"/>
+
+            <Button
+                android:id="@+id/btnRWallet"
+                android:text="R-WALLET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="#FF5722"/>
+
+            <Button
+                android:id="@+id/btnProfile"
+                android:text="PROFILE"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="#FF5722"/>
+
+            <Button
+                android:id="@+id/btnHelp"
+                android:text="HELP"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="#FF5722"/>
+        </GridLayout>
+
+        <!-- Normal Booking Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_bg"
+            android:padding="16dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:text="NORMAL BOOKING"
+                android:textStyle="bold"
+                android:background="#FF5722"
+                android:textColor="#FFFFFF"
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Radio Buttons -->
+            <RadioGroup
+                android:id="@+id/radioGroupBookingType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <RadioButton
+                    android:id="@+id/radioPaperless"
+                    android:text="Book and Travel\n(Paperless)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:id="@+id/radioPrint"
+                    android:text="Book and Print (Paper)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RadioGroup>
+
+            <!-- Station Input -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp">
+
+                <EditText
+                    android:id="@+id/editTextDepart"
+                    android:hint="Depart From"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="→"
+                    android:textSize="24sp"
+                    android:padding="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/editTextArrival"
+                    android:hint="Going To"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- NEXT Button -->
+            <Button
+                android:id="@+id/btnNext"
+                android:text="NEXT"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FF5722"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
